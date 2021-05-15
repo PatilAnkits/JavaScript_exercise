@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nameList = [{first: "Ankit", last: "Patil" },
+        {first: "Amit", last: "Patill" }];
+        const fruts = ['banana', 'apple', 'pineapple'];
+        console.table(nameList);
+        const series = [12,14,15,17,20,30,65,80,89];
+        const name = nameList.filter(value => value.first === `Ankit`);
+        const name2 = nameList.find(value => value.first === `Ankit`);
+        console.log(name);
+        console.log(name2);
+        
+
+        function addAd(frut){
+            return `@@  ${frut}  @@`;
+        }
+
+        const toys = fruts.map(addAd);
+
+        console.log(toys);
+        //console.log(nameList);
+        nameList.forEach(value => {
+            if(value.last === 'Patill'){
+                console.log(`Fisrt name of person is ${value.first}`);
+            }
+            // console.log(`the last name is ${value.last}`);
+        })
+
+        //for loop
+        for(const serie of series){
+            console.log(serie);
+            
+        }
+
+        //while loop
+
+        let cool = true;
+        let i = 1;
+        while (cool === true) {
+        console.log('You are cool');
+        i++;
+        if (i > 100) {
+            cool = false;
+        }
+        }
+
+        //Range
+
+        function createRange(start, end) {
+        const range = Array.from({ length: end - start + 1 }, function (item, index) {
+            return index + start;
+        });
+        return range;
+        }
+
+        const myRange = createRange(3, 7);
+
+        
+        console.log(Array.isArray(myRange));
+    
+    </script>
+</body>
+</html>
